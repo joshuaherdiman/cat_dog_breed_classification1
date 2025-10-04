@@ -4,8 +4,6 @@ from fastai.vision.all import *
 st.title("Breed Classifier")
 st.text("Built By Joshua")
 
-breed_classification_model = load_learner("breed-classification (1).pkl")
-
 def extract_breed(file_name):
     p = Path(file_name)
     breed_name_parts = p.stems.split("_")
@@ -19,8 +17,10 @@ def extract_breed(file_name):
 
     return final_breed_name
 
+breed_classification_model = load_learner("breed-classification (1).pkl")
+
 def predict(image):
-    img = PILImage.creat(image)
+    img = PILImage.create(image)
     pred_class, pred_idx, outputs = breed_classification_model.predict(img)
     return pred_class
 
