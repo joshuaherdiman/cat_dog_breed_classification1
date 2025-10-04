@@ -4,7 +4,7 @@ from fastai.vision.all import *
 st.title("Breed Classifier")
 st.text("Built By Joshua")
 
-breed_classification_model = load_learner("breed-classification(1).pkl")
+breed_classification_model = load_learner("breed-classification (1).pkl")
 
 def extract_breed(file_name):
     p = Path(file_name)
