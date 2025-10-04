@@ -1,6 +1,5 @@
 import streamlit as st
 from fastai.vision.all import *
-from requirements.txt import *
 
 st.title("Breed Classifier")
 st.text("Built By Joshua")
